@@ -8,35 +8,37 @@ pd.set_option('display.max_columns', None)
 pd.set_option('max_colwidth', None)
 
 movieData = pd.read_csv('./rotten_tomatoes_movies.csv')
-favMovie = ""
+favMovie = "Harry Potter and the Sorcerer's Stone"
 
-
+print("My favorite movie is " + favMovie)
 
 
 #Part 3 Investigate the data
-
+# print(movieData.head())
+# print(movieData["movie_title"])
 
 
 #Part 4 Filter data
 print("\nThe data for my favorite movie is:\n")
 #Create a new variable to store your favorite movie information
+favMovieBooleanList = movieData["movie_title"] == favMovie
+# print(favMovieBooleanList)
 
-
-
-
+favMovieData = movieData.loc[favMovieBooleanList]
+print(favMovieData)
 
 print("\n\n")
 
 #Create a new variable to store a new data set with a certain genre
+actionMovieBooleanList = movieData["genres"].str.contains("Action & Adventure")
 
+actionMovieData = movieData.loc[actionMovieBooleanList]
 
-
-
-numOfMovies = 0
+numOfMovies = actionMovieData.shape[0]
 
 print("We will be comparing " + favMovie +
-      " to other movies under the genre [X] in the data set.\n")
-print("There are " + str(numOfMovies) + " movies under the category [X].")
+      " to other movies under the genre Action & Adventure in the data set.\n")
+print("There are " + str(numOfMovies) + " movies under the category Action & Adventure.")
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 input("Press enter to see more information about how " + favMovie +
