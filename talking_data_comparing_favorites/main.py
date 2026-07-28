@@ -92,7 +92,7 @@ input("Press enter to see the next data visualization.\n")
 plt.close()
 
 #Create scatterplot
-plt.scatter(data = actionMovieData, x = "audience_rating", y = "critic_rating")
+plt.scatter(data = actionMovieData, x = "audience_rating", y = "critic_rating", label = "Animation Movies")
 
 #Adds labels and adjusts scatterplot
 plt.grid(True)
@@ -102,8 +102,15 @@ plt.ylabel("Critic Rating")
 plt.xlim(0, 100)
 plt.ylim(0, 100)
 
+plt.scatter(data = favMovieData, x = "audience_rating", y = "critic_rating", label = favMovie)
+plt.legend()
+
+
 #Prints interpretation of scatterplot
 print("According to the scatter plot, there is a positive correlation between audience ratings and critic ratings, meaning that as audience ratings increase, critic ratings generally tend to increase as well.")
+print()
+
+print("My favorite movie follows the overall positive correlation pattern and is not an outlier, as both critics and audiences gave it high ratings.")
 print()
 
 #Show scatterplot
