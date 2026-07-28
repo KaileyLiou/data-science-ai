@@ -44,46 +44,46 @@ print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 input("Press enter to see more information about how " + favMovie +
       " compares to other movies in this genre.\n")
 
+
 #Part 5 Describe data
 #min
-min = 0
+min = actionMovieData["audience_rating"].min()
 print("The min audience rating of the data set is: " + str(min))
-print(favMovie + " is rated [X] points higher than the lowest rated movie.")
+print(favMovie + " is rated 82 points higher than the lowest rated movie.")
 print()
 
 #find max
-max = 0
+max = actionMovieData["audience_rating"].max()
 print("The max audience rating of the data set is: " + str(max))
-print(favMovie + " is rated [X] points lower than the highest rated movie.")
+print(favMovie + " is rated 16 points lower than the highest rated movie.")
 print()
 
 #find mean
-mean = 0
+mean = actionMovieData["audience_rating"].mean()
 print("The mean audience rating of the data set is: " + str(mean))
-print(favMovie + " [is higher than/lower than/the same as] the mean movie rating.")
+print(favMovie + " is higher than the mean movie rating.")
 
 #find median
-median = 0
+median = actionMovieData["audience_rating"].median()
 print("The median audience rating of the data set is: " + str(median))
-print(favMovie + " [is higher than/lower than/the same as] the median movie rating.")
+print(favMovie + " is higher than the median movie rating.")
 
 print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n")
 input("Press enter to see data visualizations.\n")
 
+
 #Part 6 Create graphs
 #Create histogram
-
+plt.hist(actionMovieData["audience_rating"], range = (0, 100), bins = 20)
 
 #Adds labels and adjusts histogram
 plt.grid(True)
-plt.title("")
-plt.xlabel("")
-plt.ylabel("")
+plt.title("Audience Ratings of Action & Adventure Movies")
+plt.xlabel("Audience Ratings")
+plt.ylabel("Number of Action & Adventure Movies")
 
 #Prints interpretation of histogram
-print(
-  "According to the histogram, ..."
-)
+print("According to the histogram, most movies in this genre receive an audience rating between 40 and 80, with the highest concentration centered around 60. The distribution of audience ratings follows a roughly bell-shaped, symmetrical curve.")
 print()
 
 #Show histogram
@@ -92,21 +92,19 @@ input("Press enter to see the next data visualization.\n")
 plt.close()
 
 #Create scatterplot
+plt.scatter(data = actionMovieData, x = "audience_rating", y = "critic_rating")
 
 #Adds labels and adjusts scatterplot
 plt.grid(True)
-plt.title("")
-plt.xlabel("")
-plt.ylabel("")
+plt.title("`Audience Rating vs Critic Rating")
+plt.xlabel("Audience Rating")
+plt.ylabel("Critic Rating")
 plt.xlim(0, 100)
 plt.ylim(0, 100)
 
 #Prints interpretation of scatterplot
-print(
-  "According to the scatter plot, ..."
-)
+print("According to the scatter plot, there is a positive correlation between audience ratings and critic ratings, meaning that as audience ratings increase, critic ratings generally tend to increase as well.")
 print()
-
 
 #Show scatterplot
 plt.show()
