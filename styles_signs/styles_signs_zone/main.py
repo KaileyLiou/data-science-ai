@@ -7,9 +7,9 @@ from collections import defaultdict
 # Load the training dataset
 train_data = pd.read_csv('fashion_mnist_20bal_train.csv')
 
-selected_labels = [3, 7]
-is_label_selected = train_data['class'].isin(selected_labels)
-train_data = train_data[is_label_selected]
+# selected_labels = [3, 5, 7]
+# is_label_selected = train_data['class'].isin(selected_labels)
+# train_data = train_data[is_label_selected]
 
 # Separate the training data (features) and the  classes
 X_train = train_data.drop('class', axis=1)  # Features (all columns except the first one)
@@ -19,9 +19,9 @@ y_train = train_data['class']   # Target (first column)
 # Load the testing dataset
 test_data = pd.read_csv('fashion_mnist_20bal_test.csv')
 
-selected_labels = [3, 7]
-is_label_selected = test_data['class'].isin(selected_labels)
-test_data = test_data[is_label_selected]
+# selected_labels = [3, 5, 7]
+# is_label_selected = test_data['class'].isin(selected_labels)
+# test_data = test_data[is_label_selected]
 
 # Separate the test data (features) and the  classes
 X_test = test_data.drop('class', axis=1)  # Features (all columns except the first one)
@@ -73,3 +73,16 @@ overall_accuracy = overall_correct / len(y_test)*100
 print(f"Overall Test Accuracy: {overall_accuracy:3.1f}%")
 overall_training_accuracy = correct_counts_training / total_counts_training*100
 print(f"Overall Training Accuracy: {overall_training_accuracy:3.1f}%")
+
+conf_matrix = confusion_matrix(y_test, y_pred)
+class_ids = sorted(total_counts.keys())
+
+# For better formatting
+print("Confusion Matrix:")
+print(f"{'':9s}", end='')
+for label in class_ids:
+    print(f"Class {label:2d} ", end='')
+print()  # Newline for next row
+
+for i, row in enumerate(conf_matrix):
+    print(f"Class {class_ids[i]}:", " ".join(f"{num:8d}" for num in row))
