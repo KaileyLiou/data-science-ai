@@ -89,3 +89,12 @@ print("\nBelow is a text representation of how the Decision Tree makes choices:\
 input("\nPress Enter to continue.\n")
 
 util.printTree(clf, X.columns)
+
+#Examining and exploring feature importance
+feature_importance = pd.DataFrame(clf.feature_importances_, index = X.columns)
+print(feature_importance)
+
+import matplotlib.pyplot as plt 
+feature_importance.plot(kind='bar', title='Feature Importance')
+
+plt.show()
