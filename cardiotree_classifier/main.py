@@ -43,12 +43,12 @@ from sklearn.model_selection import train_test_split
 X = df.drop("HeartDisease", axis = 1)
 y = df["HeartDisease"]
 
-X_train, X_test, y_train, y_test = train_test_split(X, y)
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
 
 
 from sklearn.tree import DecisionTreeClassifier
 
-clf = DecisionTreeClassifier(max_depth = 3, class_weight = "balanced")
+clf = DecisionTreeClassifier(max_depth = 4, class_weight = "balanced")
 clf = clf.fit(X_train, y_train)
 
 
@@ -69,20 +69,20 @@ print(cm)
 
 
 #Test the model with the training data set and prints accuracy score
+train_predictions = clf.predict(X_train)
 
+from sklearn.metrics import accuracy_score
 
-
+train_acc = accuracy_score(y_train, train_predictions)
+print("The accuracy with the training data set of the Decision Tree is: " + str(train_acc))
 
 input("\nPress Enter to continue.\n")
 
 
-
 #Prints another application of Decision Trees and considerations
 print("\nBelow is another application of decision trees and considerations for using them:\n")
-
-
-
-
+print("\nA decision tree can automate and personalize music recommendations for streaming platforms. By analyzing user preferences, listening history, and demographic data, the decision tree can classify users into different music taste categories. Based on these classifications, the platform can recommend songs, albums, or playlists that align with the user's preferences.\n")
+print("\nHowever, there are considerations to keep in mind when using decision trees for music recommendations. Decision trees can favor certain artists or misclassify based on demographics or limited data.\n")
 
 #Prints a text representation of the Decision Tree
 print("\nBelow is a text representation of how the Decision Tree makes choices:\n")
