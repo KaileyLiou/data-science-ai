@@ -7,6 +7,10 @@ from collections import defaultdict
 # Load the training dataset
 train_data = pd.read_csv('fashion_mnist_20bal_train.csv')
 
+selected_labels = [3, 7]
+is_label_selected = train_data['class'].isin(selected_labels)
+train_data = train_data[is_label_selected]
+
 # Separate the training data (features) and the  classes
 X_train = train_data.drop('class', axis=1)  # Features (all columns except the first one)
 X_train = X_train / 255.0
@@ -15,13 +19,17 @@ y_train = train_data['class']   # Target (first column)
 # Load the testing dataset
 test_data = pd.read_csv('fashion_mnist_20bal_test.csv')
 
+selected_labels = [3, 7]
+is_label_selected = test_data['class'].isin(selected_labels)
+test_data = test_data[is_label_selected]
+
 # Separate the test data (features) and the  classes
 X_test = test_data.drop('class', axis=1)  # Features (all columns except the first one)
 X_test = X_test / 255.0
 y_test = test_data['class']   # Target (first column)
 
 
-neural_net_model = MLPClassifier( hidden_layer_sizes=(8),random_state=42,tol=0.005)
+neural_net_model = MLPClassifier(hidden_layer_sizes=(8),random_state=42,tol=0.005)
 
 neural_net_model.fit(X_train, y_train)
 # Determine model architecture 
