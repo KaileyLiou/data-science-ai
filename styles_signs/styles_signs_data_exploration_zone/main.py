@@ -5,7 +5,7 @@ from sklearn.metrics import  confusion_matrix, classification_report
 from collections import defaultdict
 
 # Load the training dataset
-train_data = pd.read_csv('fashion_mnist_20bal_train.csv')
+train_data = pd.read_csv('fashion_mnist_22unbal_train.csv')
 
 # Separate the training data (features) and the  classes
 X_train = train_data.drop('class', axis=1)  # Features (all columns except the first one)
