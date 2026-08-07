@@ -2,6 +2,13 @@
 
 This repository contains the projects I completed as part of the Girls Who Code Data Science + AI Track. Throughout the track, I explored the data science workflow, from cleaning and visualizing data to building and evaluating machine learning models in Python. Each folder represents a different project that builds on skills introduced throughout the courses.
 
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/157444f3-97d9-4c49-9a7f-3f57b604c52d" width="450"></td>
+    <td><img src="https://github.com/user-attachments/assets/9f84a8fa-3505-4aa9-a439-ee3999c26118" width="450"></td>
+  </tr>
+</table>
+
 ## Projects
 
 | Project | Description |
