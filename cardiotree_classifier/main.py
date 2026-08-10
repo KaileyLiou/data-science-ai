@@ -1,5 +1,14 @@
+import os
+import sys
 import pandas as pd
 import GWCutilities as util
+
+def resource_path(relative_path):
+    if getattr(sys, 'frozen', False):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, relative_path)
 
 pd.set_option('display.max_columns', None)
 pd.set_option('max_colwidth', None)
@@ -7,7 +16,7 @@ pd.set_option('max_colwidth', None)
 print("\n-----\n")
 
 #Create a variable to read the dataset
-df = pd.read_csv("heartDisease_2020_sampling.csv")
+df = pd.read_csv(resource_path("heartDisease_2020_sampling.csv"))
 
 print(
     "We will be performing data analysis on this Indicators of Heart Disease Dataset. Here is a sample of it: \n"
