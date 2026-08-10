@@ -1,13 +1,22 @@
 #Talking Data Starter Code
 
 #Part 2 Setting up the program
+import os
+import sys
 import pandas as pd
 import matplotlib.pyplot as plt
+
+def resource_path(relative_path):
+    if getattr(sys, 'frozen', False):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, relative_path)
 
 pd.set_option('display.max_columns', None)
 pd.set_option('max_colwidth', None)
 
-movieData = pd.read_csv('./rotten_tomatoes_movies.csv')
+movieData = pd.read_csv(resource_path("rotten_tomatoes_movies.csv"))
 favMovie = "Harry Potter and the Sorcerer's Stone"
 
 print("My favorite movie is " + favMovie)
