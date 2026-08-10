@@ -35,22 +35,42 @@ data-science-ai/
 └── talking_data_comparing_favorites/
 ```
 
-## Getting Started
+## Running the Project
 
-### Clone the repository
+For an easy-to-run version, download the executable from the project's [Releases](../../releases) page. Alternatively, you can run the Python source code directly.
+
+### How to Run on macOS
+1. Download the file from the project's **Releases** page (assets → main).
+2. Open Terminal and navigate to your download folder:
+3. Run these commands:
+
+   ```bash
+   cd ~/Downloads
+   chmod +x main
+   xattr -d com.apple.quarantine main
+   ./main
+   ```
+
+### Run from Source Code
+
+**1. Clone the repository**
 
 ```bash
 git clone https://github.com/KaileyLiou/data-science-ai.git
 ```
 
-### Navigate to a project
-
-```bash
-cd styles_signs_final_challenge
-```
-
-### Install dependencies
+**2. Install dependencies**
 
 ```bash
 pip install pandas numpy matplotlib scikit-learn
 ```
+
+**3. Run a specific project**
+
+Navigate into any project folder and execute its main Python file:
+
+```bash
+cd <project_folder_name>
+python main.py
+```
+
