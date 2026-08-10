@@ -42,9 +42,9 @@ For an easy-to-run version, download the executable for the project you want fro
 ### How to Run on macOS
 
 1. Go to the project's [Releases](../../releases) page and download the executable for the project you want:
-   - `cardiotree_classifier_mac` — CardioTree Classifier
-   - `empowering_data_womens_wellness_mac` — Empowering Data: Women's Wellness
-   - `talking_data_comparing_favorites_mac` — Talking Data: Comparing Favorites
+   - `cardiotree_classifier_mac` - CardioTree Classifier
+   - `empowering_data_womens_wellness_mac` - Empowering Data: Women's Wellness
+   - `talking_data_comparing_favorites_mac` - Talking Data: Comparing Favorites
 
 2. The downloaded file will usually be in your `Downloads` folder.
 
