@@ -1,4 +1,6 @@
 # This code is written in python
+import os
+import sys
 # The pandas library is used for data processing and to read data files
 import pandas as pd 
 #The matplotlib library is used to plot histograms and scatter plots
@@ -6,11 +8,18 @@ import matplotlib.pyplot as plt
 # The GWCutilities has functions to help format data printed to the console
 import GWCutilities as util
 
+def resource_path(relative_path):
+    if getattr(sys, 'frozen', False):
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, relative_path)
+
 # Read a comma separated values (CSV) files into a variable
 # as a pandas DataFrame
 
 #If you wish change which data set you are working with, do that here: 
-lwd=pd.read_csv("livwell175.csv")
+lwd = pd.read_csv(resource_path("livwell175.csv"))
 
 print("Vietnam and Egypt are both lower-middle-income countries, but they have taken different paths in education and economic development.\n")
 print("This data represents women living in these two countries and compares female literacy with average household wealth.\n")
