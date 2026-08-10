@@ -13,10 +13,10 @@ This repository contains the projects I completed as part of the Girls Who Code 
 
 | Project | Description |
 |---------|-------------|
-| **Cardio Tree Classifier** | Built a decision tree classifier to predict heart disease outcomes and explored feature importance to better understand the model's decisions. |
-| **Empowering Data: Women's Wellness** | Analyzed a global women's wellness dataset to identify trends and communicate insights through data visualizations and storytelling. |
-| **Styles & Signs: Final Challenge** | Trained and evaluated machine learning models to classify American Sign Language letters using the Sign Language MNIST dataset. |
-| **Talking Data: Comparing Favorites** | Explored survey data using descriptive statistics and visualizations to compare preferences across different groups. |
+| [**Cardio Tree Classifier**](./cardiotree_classifier/) | Built a decision tree classifier to predict heart disease outcomes and explored feature importance to better understand the model's decisions. |
+| [**Empowering Data: Women's Wellness**](./empowering_data_womens_wellness/) | Analyzed a global women's wellness dataset to identify trends and communicate insights through data visualizations and storytelling. |
+| [**Styles & Signs: Final Challenge**](./styles_signs_final_challenge/) | Trained and evaluated machine learning models to classify American Sign Language letters using the Sign Language MNIST dataset. |
+| [**Talking Data: Comparing Favorites**](./talking_data_comparing_favorites/) | Explored survey data using descriptive statistics and visualizations to compare preferences across different groups. |
 
 ## Skills & Technologies
 
