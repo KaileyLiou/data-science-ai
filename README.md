@@ -37,19 +37,40 @@ data-science-ai/
 
 ## Running the Project
 
-For an easy-to-run version, download the executable from the project's [Releases](../../releases) page. Alternatively, you can run the Python source code directly.
+For an easy-to-run version, download the executable for the project you want from the project's [Releases](../../releases) page. Alternatively, you can run the Python source code directly.
 
 ### How to Run on macOS
-1. Download the file from the project's **Releases** page (assets → main).
-2. Open Terminal and navigate to your download folder:
-3. Run these commands:
 
-   ```bash
-   cd ~/Downloads
-   chmod +x main
-   xattr -d com.apple.quarantine main
-   ./main
-   ```
+1. Go to the project's [Releases](../../releases) page and download the executable for the project you want:
+   - `cardiotree_classifier_mac` — CardioTree Classifier
+   - `empowering_data_womens_wellness_mac` — Empowering Data: Women's Wellness
+   - `talking_data_comparing_favorites_mac` — Talking Data: Comparing Favorites
+
+2. The downloaded file will usually be in your `Downloads` folder.
+
+3. Open Terminal and navigate to your Downloads folder:
+
+```bash
+cd ~/Downloads
+```
+
+4. Make the downloaded file executable. Replace `<filename>` with the name of the file you downloaded:
+
+```bash
+chmod +x <filename>
+```
+
+5. Remove macOS's quarantine attribute:
+
+```bash
+xattr -d com.apple.quarantine <filename>
+```
+
+6. Run the executable:
+
+```bash
+./<filename>
+```
 
 ### Run from Source Code
 
@@ -57,6 +78,7 @@ For an easy-to-run version, download the executable from the project's [Releases
 
 ```bash
 git clone https://github.com/KaileyLiou/data-science-ai.git
+cd data-science-ai
 ```
 
 **2. Install dependencies**
@@ -67,10 +89,9 @@ pip install pandas numpy matplotlib scikit-learn
 
 **3. Run a specific project**
 
-Navigate into any project folder and execute its main Python file:
+Navigate into the project folder and execute its `main.py` file:
 
 ```bash
 cd <project_folder_name>
 python main.py
 ```
-
