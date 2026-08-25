@@ -1,8 +1,8 @@
 # Girls Who Code Data Science + AI Track
 
-This repository contains the projects I completed as part of the Girls Who Code Data Science + AI Track. Throughout the track, I explored the data science workflow, from cleaning and visualizing data to building and evaluating machine learning models in Python. Each folder represents a different project that builds on skills introduced throughout the courses.
+These are the projects I made while completing the Girls Who Code Data Science + AI Track. I worked with different datasets throughout the track and learned more about data cleaning, visualization, and machine learning in Python.
 
-The projects in this repository were originally provided as templates through the Girls Who Code Data Science + AI Track and included pre-written comments throughout the code. I wrote the remaining code and completed the analysis, including the graphs, figures, tables, confusion matrices, and other outputs.
+The starting code for these projects was provided as part of the Girls Who Code course templates, including the comments already in the files. I wrote the rest of the code and did the analysis and outputs myself, including the graphs, figures, tables, and confusion matrices.
 
 <table>
   <tr>
@@ -15,19 +15,20 @@ The projects in this repository were originally provided as templates through th
 
 | Project | Description |
 |---------|-------------|
-| [**Cardio Tree Classifier**](./cardiotree_classifier/) | Built a decision tree classifier to predict heart disease outcomes and explored feature importance to better understand the model's decisions. |
-| [**Empowering Data: Women's Wellness**](./empowering_data_womens_wellness/) | Analyzed a global women's wellness dataset to identify trends and communicate insights through data visualizations and storytelling. |
-| [**Styles & Signs: Final Challenge**](./styles_signs_final_challenge/) | Trained and evaluated machine learning models to classify American Sign Language letters using the Sign Language MNIST dataset. |
-| [**Talking Data: Comparing Favorites**](./talking_data_comparing_favorites/) | Explored survey data using descriptive statistics and visualizations to compare preferences across different groups. |
+| [**Cardio Tree Classifier**](./cardiotree_classifier/) | Used a decision tree with health data to predict heart disease. I also looked at which factors were most important to the model. |
+| [**Empowering Data: Women's Wellness**](./empowering_data_womens_wellness/) | Looked at a global women's wellness dataset and used data analysis to find patterns in the data. |
+| [**Styles & Signs: Final Challenge**](./styles_signs_final_challenge/) | Built and tested a model that recognizes American Sign Language letters using the Sign Language MNIST dataset. |
+| [**Talking Data: Comparing Favorites**](./talking_data_comparing_favorites/) | Used survey data to compare people's preferences with statistics and visualizations. |
 
-## Skills & Technologies
+## Tools
 
-- **Programming:** Python
-- **Data Analysis:** pandas, NumPy
-- **Data Visualization:** matplotlib
-- **Machine Learning:** scikit-learn (Decision Trees, Neural Networks)
+- Python
+- pandas
+- NumPy
+- matplotlib
+- scikit-learn
 
-## Repository Structure
+<!-- ## Repository Structure
 
 ```text
 data-science-ai/
@@ -35,63 +36,54 @@ data-science-ai/
 ├── empowering_data_womens_wellness/
 ├── styles_signs_final_challenge/
 └── talking_data_comparing_favorites/
-```
+``` -->
 
 ## Running the Project
 
-For an easy-to-run version, download the executable for the project you want from the project's [Releases](../../releases) page. Alternatively, you can run the Python source code directly.
+You can download the executables from the [Releases](../../releases) page or run the Python files directly.
 
-### How to Run on macOS
+### macOS
 
-1. Go to the project's [Releases](../../releases) page and download the executable for the project you want:
-   - `cardiotree_classifier_mac` - CardioTree Classifier
-   - `empowering_data_womens_wellness_mac` - Empowering Data: Women's Wellness
-   - `talking_data_comparing_favorites_mac` - Talking Data: Comparing Favorites
+1. Go to the [Releases](../../releases) page and download the executable for the project you want:
+   - `cardiotree_classifier_mac`
+   - `empowering_data_womens_wellness_mac`
+   - `talking_data_comparing_favorites_mac`
 
-2. The downloaded file will usually be in your `Downloads` folder.
-
-3. Open Terminal and navigate to your Downloads folder:
+2. Open Terminal and navigate to your Downloads folder:
 
 ```bash
 cd ~/Downloads
 ```
 
-4. Make the downloaded file executable. Replace `<filename>` with the name of the file you downloaded:
+3. Make the downloaded file executable:
 
 ```bash
 chmod +x <filename>
 ```
 
-5. Remove macOS's quarantine attribute:
+4. Remove the macOS quarantine attribute:
 
 ```bash
 xattr -d com.apple.quarantine <filename>
 ```
 
-6. Run the executable:
+5. Run the executable:
 
 ```bash
 ./<filename>
 ```
 
-### Run from Source Code
+### From Python
 
-**1. Clone the repository**
+Clone the repository and install the required libraries:
 
 ```bash
 git clone https://github.com/KaileyLiou/data-science-ai.git
 cd data-science-ai
-```
-
-**2. Install dependencies**
-
-```bash
 pip install pandas numpy matplotlib scikit-learn
 ```
 
-**3. Run a specific project**
-
-Navigate into the project folder and execute its `main.py` file:
+Then go into the folder for the project you want to run:
 
 ```bash
 cd <project_folder_name>
